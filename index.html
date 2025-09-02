@@ -1,139 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loan Prepayment Calculator | EMI Strategy Simulator</title>
-  <meta name="description" content="Plan your debt-free journey smartly with our free Loan Prepayment Calculator & EMI Strategy Simulator. Save interest, reduce tenure, and compare repayment strategies with ease.">
-  <meta name="keywords" content="loan calculator, emi calculator, loan prepayment, emi strategy, debt free calculator, mortgage calculator, interest savings, loan repayment planner">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loan Prepayment Calculator | EMI Strategy Simulator — FinishLoanFast</title>
+  <meta name="description" content="Plan your debt-free journey with the free Loan Prepayment Calculator & EMI Strategy Simulator. Compare prepayment strategies, save interest, reduce tenure and finish your loan faster." />
+  <meta name="keywords" content="loan prepayment calculator, EMI calculator, pay off loan faster, prepayment strategy, interest savings, loan repayment planner" />
   <link rel="canonical" href="https://finishloanfast.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Loan Prepayment Calculator | EMI Strategy Simulator">
-  <meta property="og:description" content="Save interest, reduce EMI burden, and become debt free faster. Try our free Loan Prepayment Calculator today!">
-  <meta property="og:url" content="https://finishloanfast.com">
-  <meta property="og:image" content="https://finishloanfast.com/preview.png">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Loan Prepayment Calculator | EMI Strategy Simulator" />
+  <meta property="og:description" content="Compare prepayment strategies, save interest and reduce loan tenure using our free EMI strategy simulator." />
+  <meta property="og:url" content="https://finishloanfast.com/" />
+  <meta property="og:image" content="https://finishloanfast.com/images/preview.png" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Loan Prepayment Calculator | EMI Strategy Simulator">
-  <meta name="twitter:description" content="Smart Loan Calculator: Compare EMI strategies, save interest, and plan your debt-free journey. 100% Free Tool.">
-  <meta name="twitter:image" content="https://finishloanfast.com/preview.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Loan Prepayment Calculator | EMI Strategy Simulator" />
+  <meta name="twitter:description" content="Try the free Loan Prepayment Calculator to see interest & tenure impact instantly." />
+  <meta name="twitter:image" content="https://finishloanfast.com/images/preview.png" />
 
-  <link rel="icon" href="https://finishloanfast.com/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="https://finishloanfast.com/apple-touch-icon.png">
-
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD (SoftwareApplication) -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Loan Prepayment Calculator | EMI Strategy Simulator",
-    "operatingSystem": "All",
-    "applicationCategory": "FinanceApplication",
-    "description": "Free Loan Prepayment Calculator & EMI Strategy Simulator. Compare current loan vs prepayment effect, save interest, reduce tenure, and plan your debt-free journey smartly.",
-    "url": "https://finishloanfast.com",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "creator": { "@type": "Organization", "name": "FinishLoanFast" },
-    "keywords": "loan calculator, emi calculator, loan prepayment, emi strategy, debt free calculator, mortgage calculator, interest savings, loan repayment planner"
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"Loan Prepayment Calculator | EMI Strategy Simulator",
+    "url":"https://finishloanfast.com",
+    "description":"Free Loan Prepayment Calculator & EMI Strategy Simulator. Calculate interest savings and reduced tenure by prepaying parts of your loan.",
+    "applicationCategory":"FinanceApplication",
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"INR"},
+    "creator": {"@type":"Organization","name":"FinishLoanFast"}
   }
   </script>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Theme Toggle -->
-  <button id="themeToggle" class="theme-btn">🌙</button>
-
-  <div class="container">
-    <h1>Loan Strategy Simulator</h1>
-
-    <!-- Input Section -->
-    <div class="form-section card">
-      <h2>Enter Loan Details</h2>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>Loan Amount (₹):</label>
-          <input type="number" id="loanAmount" placeholder="e.g. 3000000">
-        </div>
-        <div class="form-group">
-          <label>Annual Interest Rate (%):</label>
-          <input type="number" id="interestRate" placeholder="e.g. 8.5">
-        </div>
+  <header class="site-header">
+    <nav class="top-nav">
+      <a class="brand" href="/">FinishLoanFast</a>
+      <div class="nav-links">
+        <a href="/blog/top-strategies-payoff.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
       </div>
+    </nav>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label>Loan Tenure (months):</label>
-          <input type="number" id="loanTenure" placeholder="e.g. 120">
-        </div>
-        <div class="form-group">
-          <label>Monthly Lump Sum (₹):</label>
-          <input type="number" id="lumpSum" placeholder="e.g. 50000">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>Lump Sum Duration (months):</label>
-          <input type="number" id="lumpMonths" placeholder="e.g. 6">
-        </div>
-      </div>
-
-      <button onclick="simulate()">Simulate</button>
+    <div class="hero">
+      <h1>Loan Prepayment Calculator &amp; EMI Strategy Simulator</h1>
+      <p class="lead">Use our free calculator to compare prepayment strategies, reduce your interest, and finish your loan faster. Works for home loans, personal loans and mortgages.</p>
+      <p><a class="cta" href="#calculator">Try the calculator now →</a></p>
+      <img src="/images/preview.png" alt="Sample loan repayment chart showing interest vs principal over time" class="hero-img" />
     </div>
+  </header>
 
-    <!-- Output Section -->
-    <div id="results" class="hidden">
-      <div class="card summary-box">
-        <h2>📑 Strategy Comparison</h2>
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Metric</th>
-              <th>Current Loan</th>
-              <th>With Prepayment</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Loan Term</td><td id="curTerm">-</td><td id="newTerm">-</td></tr>
-            <tr><td>Total Interest</td><td id="curInterest">-</td><td id="newInterest">-</td></tr>
-            <tr><td>Payoff Date</td><td id="curPayoff">-</td><td id="newPayoff">-</td></tr>
-            <tr><td>⏳ Time Saved</td><td>-</td><td id="timeSaved">-</td></tr>
-            <tr><td>💰 Interest Saved</td><td>-</td><td id="interestSaved">-</td></tr>
-            <tr><td>📊 Net Benefit</td><td>-</td><td id="netBenefit">-</td></tr>
-          </tbody>
-        </table>
+  <main class="container">
+    <!-- Calculator anchor -->
+    <section id="calculator" class="card">
+      <h2>Loan Calculator</h2>
+      <p>Enter your loan details and optional monthly prepayments — then click <strong>Simulate</strong>.</p>
+
+      <!-- form (same structure you use) -->
+      <div class="form-row">
+        <label>Loan Amount (₹)<input id="loanAmount" type="number" placeholder="2,500,000" /></label>
+        <label>Annual Interest Rate (%)<input id="interestRate" type="number" step="0.01" placeholder="8.5" /></label>
+        <label>Loan Tenure (months)<input id="loanTenure" type="number" placeholder="240" /></label>
       </div>
 
-      <!-- Repayment Table -->
-      <div class="card table-section">
-        <h2>📅 Repayment Schedule</h2>
-        <button onclick="exportCSV()">⬇ Export CSV</button>
-        <table id="repaymentTable">
-          <thead>
-            <tr>
-              <th>Month</th>
-              <th>Opening Balance</th>
-              <th>EMI</th>
-              <th>Principal Paid</th>
-              <th>Interest Paid</th>
-              <th>Extra Payment</th>
-              <th>Closing Balance</th>
-            </tr>
-          </thead>
-          <tbody id="repaymentBody"></tbody>
-        </table>
+      <div class="form-row small">
+        <label>Monthly Lump Sum (₹)<input id="lumpSum" type="number" placeholder="Optional" /></label>
+        <label>Lump Sum Duration (months)<input id="lumpMonths" type="number" placeholder="Optional" /></label>
       </div>
+
+      <div class="actions">
+        <button onclick="simulate()">Simulate</button>
+        <button onclick="exportCSV()">Export CSV</button>
+      </div>
+    </section>
+
+    <!-- How prepayment works -->
+    <section class="card">
+      <h2>How Loan Prepayment Works</h2>
+      <p>When you prepay a portion of your loan, the outstanding principal reduces immediately. That reduces the interest charged going forward — which can either lower your monthly EMI or shorten the loan tenure depending on your bank's policy.</p>
+      <ul>
+        <li><strong>Immediate principal reduction</strong> — less interest accrues each month.</li>
+        <li><strong>Two outcomes</strong> — either pay lower EMI or finish earlier.</li>
+        <li><strong>Use the simulator</strong> to compare both outcomes and pick the best strategy for you.</li>
+      </ul>
+    </section>
+
+    <!-- Benefits -->
+    <section class="card">
+      <h2>Why Prepay? Benefits</h2>
+      <ul>
+        <li>Save on total interest paid over loan life</li>
+        <li>Become debt-free earlier</li>
+        <li>Reduce financial stress and interest burden</li>
+      </ul>
+    </section>
+
+    <!-- FAQ (use <details> so bots still see the content) -->
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>What is EMI?</summary>
+        <p>EMI is Equated Monthly Installment — a fixed monthly payment to repay principal and interest over the loan term.</p>
+      </details>
+
+      <details>
+        <summary>Will prepayment always reduce my EMI?</summary>
+        <p>Not always. Some banks shorten tenure while keeping the EMI same; others reduce EMI. Check your loan terms and use the simulator to model both cases.</p>
+      </details>
+
+      <details>
+        <summary>Are there penalties for prepayment?</summary>
+        <p>Some lenders charge prepayment fees. Confirm with your bank; the calculator assumes no penalty by default.</p>
+      </details>
+    </section>
+
+    <!-- Results area (populated by script) -->
+    <section id="results" class="card hidden" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav">
+        <a href="/">Home</a> ·
+        <a href="/blog/top-strategies-payoff.html">Blog</a> ·
+        <a href="/about.html">About</a> ·
+        <a href="/contact.html">Contact</a> ·
+        <a href="/privacy.html">Privacy</a>
+      </nav>
+      <p>© <span id="year"></span> FinishLoanFast — Free Loan Prepayment Calculator</p>
     </div>
-  </div>
+  </footer>
 
-  <!-- JS -->
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

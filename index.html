@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Prepayment Calculator | EMI Strategy Simulator</title>
+  <meta name="description" content="Free Loan Prepayment Calculator & EMI Strategy Simulator. Compare current loan vs prepayment effect, save interest, reduce tenure, and plan your debt-free journey smartly.">
+  <meta name="keywords" content="loan calculator, emi calculator, loan prepayment, emi strategy, debt free calculator, mortgage calculator, interest savings, loan repayment planner">
+
+  <link rel="canonical" href="https://yourwebsite.com" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Loan Prepayment Calculator | EMI Strategy Simulator">
+  <meta property="og:description" content="Save interest, reduce EMI burden, and become debt free faster. Try our free Loan Prepayment Calculator today!">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta property="og:image" content="https://yourwebsite.com/preview-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Loan Prepayment Calculator | EMI Strategy Simulator">
+  <meta name="twitter:description" content="Smart Loan Calculator: Compare EMI strategies, save interest, and plan your debt-free journey. 100% Free Tool.">
+  <meta name="twitter:image" content="https://yourwebsite.com/preview-image.png">
+
+  <link rel="icon" href="https://yourwebsite.com/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://yourwebsite.com/apple-touch-icon.png">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Loan Prepayment Calculator | EMI Strategy Simulator",
+    "operatingSystem": "All",
+    "applicationCategory": "FinanceApplication",
+    "description": "Free Loan Prepayment Calculator & EMI Strategy Simulator. Compare current loan vs prepayment effect, save interest, reduce tenure, and plan your debt-free journey smartly.",
+    "url": "https://yourwebsite.com",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "creator": { "@type": "Organization", "name": "Your Brand Name" },
+    "keywords": "loan calculator, emi calculator, loan prepayment, emi strategy, debt free calculator, mortgage calculator, interest savings, loan repayment planner"
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <button id="themeToggle" class="theme-btn">🌙</button>
+
+  <div class="container">
+    <h1>Loan Strategy Simulator</h1>
+
+    <!-- Input Section -->
+    <div class="form-section card">
+      <h2>Enter Loan Details</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Loan Amount (₹):</label>
+          <input type="number" id="loanAmount" placeholder="e.g. 3000000">
+        </div>
+        <div class="form-group">
+          <label>Annual Interest Rate (%):</label>
+          <input type="number" id="interestRate" placeholder="e.g. 8.5">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Loan Tenure (months):</label>
+          <input type="number" id="loanTenure" placeholder="e.g. 120">
+        </div>
+        <div class="form-group">
+          <label>Monthly Lump Sum (₹):</label>
+          <input type="number" id="lumpSum" placeholder="e.g. 50000">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Lump Sum Duration (months):</label>
+          <input type="number" id="lumpMonths" placeholder="e.g. 6">
+        </div>
+      </div>
+
+      <button onclick="simulate()">Simulate</button>
+    </div>
+
+    <!-- Output Section -->
+    <div id="results" class="hidden">
+      <div class="card summary-box">
+        <h2>📑 Strategy Comparison</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Current Loan</th>
+              <th>With Prepayment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Loan Term</td><td id="curTerm">-</td><td id="newTerm">-</td></tr>
+            <tr><td>Total Interest</td><td id="curInterest">-</td><td id="newInterest">-</td></tr>
+            <tr><td>Payoff Date</td><td id="curPayoff">-</td><td id="newPayoff">-</td></tr>
+            <tr><td>⏳ Time Saved</td><td>-</td><td id="timeSaved">-</td></tr>
+            <tr><td>💰 Interest Saved</td><td>-</td><td id="interestSaved">-</td></tr>
+            <tr><td>📊 Net Benefit</td><td>-</td><td id="netBenefit">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Repayment Table -->
+      <div class="card table-section">
+        <h2>📅 Repayment Schedule</h2>
+        <button onclick="exportCSV()">⬇ Export CSV</button>
+        <table id="repaymentTable">
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Opening Balance</th>
+              <th>EMI</th>
+              <th>Principal Paid</th>
+              <th>Interest Paid</th>
+              <th>Extra Payment</th>
+              <th>Closing Balance</th>
+            </tr>
+          </thead>
+          <tbody id="repaymentBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
